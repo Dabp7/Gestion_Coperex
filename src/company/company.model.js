@@ -3,8 +3,7 @@ import { Schema, model } from "mongoose";
 const companySchema = new Schema({
     nameCompany: {
         type: String,
-        required: true,
-        unique: true
+        required:[true, "Name is required"]
     },
     email: {
         type: String,
@@ -21,6 +20,10 @@ const companySchema = new Schema({
     category: {
         type: String,
         required: [true, "Category is required"]
+    },
+    trayectory: {  
+        type: Number,
+        required: [true, "Trayectory is required"]
     },
 }, {
     versionKey: false,

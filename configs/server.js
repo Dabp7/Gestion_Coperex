@@ -7,6 +7,7 @@ import morgan from "morgan"
 import { dbConnection } from "./mongo.js"
 import { adminDefaultCreated } from "../src/admin/admin.controller.js"
 import authRoutes from "../src/auth/auth.routes.js"
+import companyRoutes from "../src/company/company.routes.js"
 
 const middlewares = (app) => {
     app.use(express.json())
@@ -18,6 +19,7 @@ const middlewares = (app) => {
 
 const routes = (app) =>{
     app.use("/coperex/v1/auth", authRoutes)
+    app.use("/coperex/v1/company", companyRoutes)
 }
 
 
