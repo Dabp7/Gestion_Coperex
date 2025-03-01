@@ -1,0 +1,8 @@
+[{
+  "_id": {
+    "$oid": "67c2069d2bba29611ab9e536"
+  },
+  "username": "Dabpp",
+  "email": "Dabp@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$oHNej44KAeixPtR8KrVUBQ$Mmim8Htc4yJAN4C1UXqAhaM0D8NaNIGYty1N7B6HA8I"
+}]

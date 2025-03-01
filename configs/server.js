@@ -20,6 +20,7 @@ const middlewares = (app) => {
 const routes = (app) =>{
     app.use("/coperex/v1/auth", authRoutes)
     app.use("/coperex/v1/company", companyRoutes)
+    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs)) 
 }
 
 

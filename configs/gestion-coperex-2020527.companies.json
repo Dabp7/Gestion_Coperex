@@ -1,0 +1,119 @@
+[{
+  "_id": {
+    "$oid": "67c23a8e60dc57641c7ac4a0"
+  },
+  "nameCompany": "Big Pepsi",
+  "email": "bigCola@gmail.com",
+  "foundationYear": 2010,
+  "impactLevel": "Alto",
+  "category": "Bebidas poco conocidas",
+  "trayectory": 15,
+  "createdAt": {
+    "$date": "2025-02-28T22:37:02.802Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T01:05:21.845Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c23aa660dc57641c7ac4a8"
+  },
+  "nameCompany": "BiG Cola",
+  "email": "bigCola3@gmail.com",
+  "foundationYear": 2010,
+  "impactLevel": "Medio",
+  "category": "Bebidas",
+  "trayectory": 15,
+  "createdAt": {
+    "$date": "2025-02-28T22:37:26.795Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T22:37:26.795Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c23ac760dc57641c7ac4ac"
+  },
+  "nameCompany": "Coca cola",
+  "email": "CocaCola@gmail.com",
+  "foundationYear": 1990,
+  "impactLevel": "Alto",
+  "category": "Bebidas",
+  "trayectory": 35,
+  "createdAt": {
+    "$date": "2025-02-28T22:37:59.532Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T22:37:59.532Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c23c4e0620a3b49e43abab"
+  },
+  "nameCompany": "Pepsi",
+  "email": "pepsi@gmail.com",
+  "foundationYear": 1999,
+  "impactLevel": "Alto",
+  "category": "Bebidas",
+  "trayectory": 26,
+  "createdAt": {
+    "$date": "2025-02-28T22:44:30.727Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T22:44:30.727Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c23c760620a3b49e43abb3"
+  },
+  "nameCompany": "Diana",
+  "email": "diana@gmail.com",
+  "foundationYear": 2010,
+  "impactLevel": "Alto",
+  "category": "Golosinas",
+  "trayectory": 15,
+  "createdAt": {
+    "$date": "2025-02-28T22:45:10.557Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-28T22:45:10.557Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c265d7ec6807ddbb3305c9"
+  },
+  "nameCompany": "Nachos Diana",
+  "email": "dianaNachos@gmail.com",
+  "foundationYear": 2010,
+  "impactLevel": "Alto",
+  "category": "Nachos",
+  "trayectory": 15,
+  "createdAt": {
+    "$date": "2025-03-01T01:41:43.138Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T01:41:43.138Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c2662dec6807ddbb3305d0"
+  },
+  "nameCompany": "7Up",
+  "email": "sevenUp@gmail.com",
+  "foundationYear": 1989,
+  "impactLevel": "Alto",
+  "category": "Bebidas",
+  "trayectory": 36,
+  "createdAt": {
+    "$date": "2025-03-01T01:43:09.286Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-01T01:43:09.286Z"
+  }
+}]

@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "dfce8d70-7d45-4bd3-a8e6-ca3491430bba",
+		"name": "Coperex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38160952"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"Dabp@gmail.com\",\r\n    \"password\": \"dBerc1an!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/coperex/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coperex",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "Agregar Empresa",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2MyMDY5ZDJiYmEyOTYxMWFiOWU1MzYiLCJpYXQiOjE3NDA3ODI2NDgsImV4cCI6MTc0MDc4NjI0OH0.PNqiyHk5bhXZr0SzikBvN5drJVaWsyp3mjOIpwHBRhU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameCompany\": \"Diana\" ,\r\n    \"email\": \"diana@gmail.com\",\r\n    \"foundationYear\": 2010,\r\n    \"impactLevel\": \"Alto\",\r\n    \"category\": \"Golosinas\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/coperex/v1/company/addCompany",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coperex",
+								"v1",
+								"company",
+								"addCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Trayectoria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/coperex/v1/company/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coperex",
+								"v1",
+								"company",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Categoria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/coperex/v1/company/getCategory/Bebidas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coperex",
+								"v1",
+								"company",
+								"getCategory",
+								"Bebidas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar A-Z",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/coperex/v1/company/getCompany/A-Z",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coperex",
+								"v1",
+								"company",
+								"getCompany",
+								"A-Z"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Z-A",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/coperex/v1/company/getCompany/Z-A",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coperex",
+								"v1",
+								"company",
+								"getCompany",
+								"Z-A"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Empresa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameCompany\": \"Big Pepsi\" ,\r\n    \"impactLevel\": \"Alto\",\r\n    \"category\": \"Bebidas poco conocidas\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/coperex/v1/company/editCompany/67c23a8e60dc57641c7ac4a0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coperex",
+								"v1",
+								"company",
+								"editCompany",
+								"67c23a8e60dc57641c7ac4a0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reportes",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

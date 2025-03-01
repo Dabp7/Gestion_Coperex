@@ -24,7 +24,7 @@ export const validateJWT = async (req, res, next) =>{
         }
 
         req.usuario = user
-        next()
+        
     } catch (err) {
         return res.status(500).json({
             success: false,

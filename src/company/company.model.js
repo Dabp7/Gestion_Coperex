@@ -3,11 +3,13 @@ import { Schema, model } from "mongoose";
 const companySchema = new Schema({
     nameCompany: {
         type: String,
-        required:[true, "Name is required"]
+        required:[true, "Name is required"],
+        unique: true
     },
     email: {
         type: String,
-        required: [true, "Email is required"]
+        required: [true, "Email is required"],
+        unique: true
     },
     foundationYear: {  
         type: Number,
