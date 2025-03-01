@@ -12,18 +12,12 @@ Este proyecto es un **sistema de gestión de empresas** que se presentarán en *
 ✔️ **Edición de Empresas**: Permite modificar los datos de una empresa registrada.  
 ✔️ **Generación de Reportes**: Exporta la información de todas las empresas a **Excel**.  
 
----
 
-##  Instalación y Configuración  
+###  Rutas 
 
-###  Clonar el repositorio  
 ```bash
-git clone https://github.com/tu-usuario/coperex_company.git
-cd coperex_company
 
-## Endpoints Disponibles
 🔹 Autenticación
-
 
 POST	/coperex/v1/auth/login	Iniciar sesión como administrador
 
