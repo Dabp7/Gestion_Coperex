@@ -1,4 +1,8 @@
 node_modules/
-
-package-lock.json
-
+.env
+.env.*
+!.env.example
+public/reports/
+configs/data/
+configs/gestion-coperex-2020527.*.json
+*.local.json

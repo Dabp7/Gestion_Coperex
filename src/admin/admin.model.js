@@ -1,6 +1,11 @@
 import { Schema, model} from "mongoose";
 
 const adminSchema = Schema({
+    role: {
+        type: String,
+        enum: ['ADMIN_ROLE', 'VIEWER_ROLE'],
+        default: 'ADMIN_ROLE'
+    },
     username:{
         type: String,
         required: true,
