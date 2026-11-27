@@ -1,50 +1,23 @@
-"use strict"
-
-import express from "express"
-import cors from "cors"
-import helmet from "helmet"
-import morgan from "morgan"
-import { dbConnection } from "./mongo.js"
-import { adminDefaultCreated } from "../src/admin/admin.controller.js"
-import authRoutes from "../src/auth/auth.routes.js"
-import companyRoutes from "../src/company/company.routes.js"
-
-const middlewares = (app) => {
-    app.use(express.json())
-    app.use(cors())
-    app.use(helmet())
-    app.use(morgan("dev"))
+import express from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
+import { dbConnection } from './mongo.js';
+import authRoutes from '../src/auth/auth.routes.js';
+import companyRoutes from '../src/company/company.routes.js';
+import { swaggerDocs, swaggerUi } from './swagger.js';
+export function createApp() {
+    const app=express();
+    app.use(express.json({limit:'128kb'}),cors(),helmet());
+    app.get('/health',(_req,res)=>res.json({status:'ok'}));
+    app.use('/coperex/v1/auth',authRoutes);
+    app.use('/coperex/v1/company',companyRoutes);
+    app.get('/openapi.json',(_req,res)=>res.json(swaggerDocs));
+    app.use('/api-docs',swaggerUi.serve,swaggerUi.setup(swaggerDocs));
+    app.use((error,_req,res,_next)=>res.status(error.status===400?400:500).json({success:false,message:error.status===400?'Invalid JSON body':'Internal server error'}));
+    return app;
 }
-
-
-const routes = (app) =>{
-    app.use("/coperex/v1/auth", authRoutes)
-    app.use("/coperex/v1/company", companyRoutes)
-    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs)) 
+export async function initServer() {
+    if (!process.env.SECRETORPRIVATEKEY || process.env.SECRETORPRIVATEKEY.length<32) throw new Error('Set SECRETORPRIVATEKEY with 32 characters or more');
+    await dbConnection();
+    return createApp().listen(Number(process.env.PORT||3002),'127.0.0.1',()=>console.log('Coperex ready'));
 }
-
-
-const conectarDB = async () =>{
-    try{
-        await dbConnection()
-    }catch(err){
-        console.log(`Database connection failed: ${err}`)
-        process.exit(1)
-    }
-}
-
-
-export const initServer = () => {
-    const app = express()
-    try{
-        middlewares(app)
-        conectarDB()
-        adminDefaultCreated()
-        routes(app)
-        app.listen(process.env.PORT)
-        console.log(`Server running on port ${process.env.PORT}`)
-    }catch(err){
-        console.log(`Server init failed: ${err}`)
-    }
-}
-
