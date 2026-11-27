@@ -34,7 +34,7 @@ PUT /editCompany/:idCompany admite esos campos; recalcula trayectoria y valida l
 npm test
 ```
 Pruebas HTTP con MongoDB real temporal: autenticación de todas las rutas, rol sin permiso, filtros combinados, orden/paginación, lectura del XLSX con ExcelJS, tipos numéricos y entradas inválidas.
-La primera ejecución descarga un binario oficial. Se puede reutilizar uno local con MONGOMS_SYSTEM_BINARY; no usa la base personal.
+La instalación npm ci no descarga MongoDB. La primera ejecución de las pruebas descarga el binario oficial 8.0.16 elegido por la suite. Se puede reutilizar uno local con MONGOMS_SYSTEM_BINARY; no usa la base personal.
 GitHub Actions ejecuta npm ci y npm test.
 
 .env, reportes y dumps no se versionan. Una credencial real presente en el historial debe rotarse en su servicio; retirarla del árbol no la revoca. Datos nuevos del seed son ficticios.

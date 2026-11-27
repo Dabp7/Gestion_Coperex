@@ -12,6 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/Dabp7/Gestion_Coperex.git"
   },
+  "config": { "mongodbMemoryServer": { "disablePostinstall": true } },
   "keywords": [],
   "author": "Diego Bercian",
   "license": "ISC",
